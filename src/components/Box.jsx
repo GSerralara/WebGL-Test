@@ -1,8 +1,11 @@
 
 import React, { useRef, useState } from 'react'
 import { useFrame } from '@react-three/fiber'
-
+import { useThree } from '@react-three/fiber'
+import {Color} from "three";
 function Box(props) {
+  const { scene } = useThree();
+  scene.background = new Color("rgb(70, 75, 80)");
   // This reference will give us direct access to the mesh
   const mesh = useRef()
   // Set up state for the hovered and active state
