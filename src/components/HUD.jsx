@@ -1,9 +1,8 @@
 import './../styles/HUD.css'
-function HUD() {
-    
+function HUD({initTravel}) {
     return (
         <div id="HUD">
-            <button>Go to Planet 2</button>
+            <button onClick={initTravel}>Go to Planet 2</button>
         </div>
     );
 }
