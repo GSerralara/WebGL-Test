@@ -1,7 +1,9 @@
 
-import earthMap from './../textures/mars_color.jpg'
-import earthNormalMap from './../textures/mars_normal.jpg'
+import earthMap from './../textures/earth_map.jpg'
+import earthNormalMap from './../textures/earth_normal.jpg'
 
+import marsMap from './../textures/mars_color.jpg'
+import marsNormalMap from './../textures/mars_normal.jpg'
 
 import { Suspense, Fragment, useRef } from 'react'
 import { useLoader, useFrame } from '@react-three/fiber'
@@ -10,11 +12,13 @@ import { TextureLoader } from 'three/src/loaders/TextureLoader'
 
 
 function Planet(props) {
-    const mesh = useRef()
+    const mesh = useRef();
+    const color = props.name === 'earth' ? earthMap : marsMap;
+    const normal = props.name === 'earth' ? earthNormalMap : marsNormalMap;
     useFrame((state, delta) => (mesh.current.rotation.y += 0.01))
     const [colorMap, normalMap] = useLoader(TextureLoader, [
-    earthMap,
-    earthNormalMap
+    color,
+    normal
     ])
     return(
         <Fragment>
