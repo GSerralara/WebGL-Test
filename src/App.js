@@ -9,7 +9,7 @@ import { useState } from 'react';
 function App() {
   const [clicked, setClicked] = useState(false);
   const initTravel = () =>{
-    setClicked(!clicked);
+    setClicked(true);
     console.log('clicked');
   };
   return (
