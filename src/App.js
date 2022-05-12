@@ -5,6 +5,7 @@ import { Canvas} from '@react-three/fiber'
 import Planet from './components/planet';
 import SkyBox  from './components/SkyBox';
 import Stars from './components/stars';
+import HUD from './components/HUD';
 function App() {
   
   return (
@@ -17,6 +18,7 @@ function App() {
         <ambientLight intensity={0.1} />
         <pointLight position={[10, 10, 10]} />
       </Canvas>
+      <HUD/>
     </div>
   );
 }

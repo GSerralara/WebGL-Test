@@ -1,0 +1,46 @@
+#HUD{
+    text-shadow: 0 0 40px #fe2079;
+    color: #eee;
+    font-size: 8rem;
+    font-weight: 700;
+    position: absolute;
+    bottom: 3vh;
+    left: 4vh;
+    transform: skew(0deg, -10deg);
+    margin: 0;
+}
+#HUD button{
+    background-image: linear-gradient(
+    to right,
+    #29323c,
+    #485563,
+    #2b5876,
+    #4e4376
+    );
+    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+    width: 160px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 0px;
+    height: 55px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+#HUD button:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+#HUD button::focus {
+    outline: none;
+}
